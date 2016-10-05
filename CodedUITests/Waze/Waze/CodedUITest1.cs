@@ -22,13 +22,15 @@ namespace Waze
         public CodedUITest1()
         {
         }
+        [TestInitialize]
+        public void Initialize()
+        {
+            testapp = ApplicationUnderTest.Launch(@"c:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
+        }
 
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void SearchForLocation()
         {
-            //"\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\""
-            // testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
         }
         [TestCleanup()]
         public void myTestCleanUp()
