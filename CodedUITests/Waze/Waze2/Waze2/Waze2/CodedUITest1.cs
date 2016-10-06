@@ -73,10 +73,37 @@ namespace Waze2
         {
             this.UIMap.GoToCanada();
         }
-
+        [TestMethod]
+        //This is testing how waze responds to ferrys in a route. It should succeed
+        public void ferryRun()
+        {
+            this.UIMap.FerryRun();
+        }
+        [TestMethod]
+        //This tests how waze deals with military bases. We expect that it should be able to find a route.
+        public void baseTry()
+        {
+            this.UIMap.FortSearch();
+        }
+        [TestMethod]
+        //This tests how far the program can search north/south. We expect it to succeed or give the error message on over 1000 miles
+        public void NS()
+        {
+            this.UIMap.WhitToScripps();
+            this.UIMap.WhitToSantaClara();
+            this.UIMap.WhitToSanDiego();
+        }
+        [TestMethod]
+        //This tests how far the program can search east/west. We expect this distance to fail
+        public void EW()
+        {
+            this.UIMap.EastWest();
+        }
         [TestCleanup()]
         public void myTestCleanUp()
         {
+
+            
         }
 
         #region Additional test attributes

@@ -232,6 +232,177 @@ namespace Waze2
             Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(108, 259));
         }
         
+        /// <summary>
+        /// This searches between Seattle University and an island that requires a ferry
+        /// </summary>
+        public void FerryRun()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(146, 194));
+
+            // Type 'Seattle {RShiftKey}University' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.FerryRunParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(169, 286));
+
+            // Type 'whid' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.FerryRunParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(120, 252));
+        }
+        
+        /// <summary>
+        /// Looks to see how waze interacts with a military base
+        /// </summary>
+        public void FortSearch()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(133, 193));
+
+            // Type 'Parade {RShiftKey}Field' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.FortSearchParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(200, 215));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(152, 211));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(145, 219));
+
+            // Type 'Odenton {RShiftKey}Marc' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.FortSearchParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(225, 261));
+        }
+        
+        /// <summary>
+        /// This searches between Whitworth and Santa Clara University
+        /// </summary>
+        public void WhitToSantaClara()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(137, 189));
+
+            // Type 'Whitworth {RShiftKey}Univer' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToSantaClaraParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(179, 225));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(165, 222));
+
+            // Type 'Santa {RShiftKey}Clara {RShiftKey}Un' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToSantaClaraParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(181, 382));
+        }
+        
+        /// <summary>
+        /// Tests N/S distance from Whitworth to Scripps
+        /// </summary>
+        public void WhitToScripps()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(105, 181));
+
+            // Type 'Whitworth {RShiftKey}University' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToScrippsParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(160, 235));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(111, 218));
+
+            // Type 'Scripps {RShiftKey}Co' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToScrippsParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(135, 260));
+        }
+        
+        /// <summary>
+        /// Searches for distance between whitworth and san diego
+        /// </summary>
+        public void WhitToSanDiego()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(171, 195));
+
+            // Type 'Whitworth' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToSanDiegoParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(173, 212));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(130, 219));
+
+            // Type 'University of {RShiftKey}San {RShiftKey}D' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.WhitToSanDiegoParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(197, 253));
+        }
+        
+        /// <summary>
+        /// Trys to get directions from Whitworth to University of Maryland
+        /// </summary>
+        public void EastWest()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(141, 183));
+
+            // Type 'Whitworth {RShiftKey}University' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.EastWestParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(180, 241));
+
+            // Type 'University of {RShiftKey}Maryland' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.EastWestParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(263, 256));
+        }
+        
         #region Properties
         public virtual SearchOnWhitworthParams SearchOnWhitworthParams
         {
@@ -317,6 +488,78 @@ namespace Waze2
             }
         }
         
+        public virtual FerryRunParams FerryRunParams
+        {
+            get
+            {
+                if ((this.mFerryRunParams == null))
+                {
+                    this.mFerryRunParams = new FerryRunParams();
+                }
+                return this.mFerryRunParams;
+            }
+        }
+        
+        public virtual FortSearchParams FortSearchParams
+        {
+            get
+            {
+                if ((this.mFortSearchParams == null))
+                {
+                    this.mFortSearchParams = new FortSearchParams();
+                }
+                return this.mFortSearchParams;
+            }
+        }
+        
+        public virtual WhitToSantaClaraParams WhitToSantaClaraParams
+        {
+            get
+            {
+                if ((this.mWhitToSantaClaraParams == null))
+                {
+                    this.mWhitToSantaClaraParams = new WhitToSantaClaraParams();
+                }
+                return this.mWhitToSantaClaraParams;
+            }
+        }
+        
+        public virtual WhitToScrippsParams WhitToScrippsParams
+        {
+            get
+            {
+                if ((this.mWhitToScrippsParams == null))
+                {
+                    this.mWhitToScrippsParams = new WhitToScrippsParams();
+                }
+                return this.mWhitToScrippsParams;
+            }
+        }
+        
+        public virtual WhitToSanDiegoParams WhitToSanDiegoParams
+        {
+            get
+            {
+                if ((this.mWhitToSanDiegoParams == null))
+                {
+                    this.mWhitToSanDiegoParams = new WhitToSanDiegoParams();
+                }
+                return this.mWhitToSanDiegoParams;
+            }
+        }
+        
+        public virtual EastWestParams EastWestParams
+        {
+            get
+            {
+                if ((this.mEastWestParams == null))
+                {
+                    this.mEastWestParams = new EastWestParams();
+                }
+                return this.mEastWestParams;
+            }
+        }
+        
         public UITrafficJamNewsUpdateWindow UITrafficJamNewsUpdateWindow
         {
             get
@@ -344,6 +587,18 @@ namespace Waze2
         private BetweenBuildingsParams mBetweenBuildingsParams;
         
         private GoToCanadaParams mGoToCanadaParams;
+        
+        private FerryRunParams mFerryRunParams;
+        
+        private FortSearchParams mFortSearchParams;
+        
+        private WhitToSantaClaraParams mWhitToSantaClaraParams;
+        
+        private WhitToScrippsParams mWhitToScrippsParams;
+        
+        private WhitToSanDiegoParams mWhitToSanDiegoParams;
+        
+        private EastWestParams mEastWestParams;
         
         private UITrafficJamNewsUpdateWindow mUITrafficJamNewsUpdateWindow;
         #endregion
@@ -491,6 +746,126 @@ namespace Waze2
         /// Type 'Nelson ' in 'Chrome Legacy Window' document
         /// </summary>
         public string UIChromeLegacyWindowDocumentSendKeys1 = "Nelson ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'FerryRun'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class FerryRunParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Seattle {RShiftKey}University' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Seattle {RShiftKey}University";
+        
+        /// <summary>
+        /// Type 'whid' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "whid";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'FortSearch'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class FortSearchParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Parade {RShiftKey}Field' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Parade {RShiftKey}Field";
+        
+        /// <summary>
+        /// Type 'Odenton {RShiftKey}Marc' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Odenton {RShiftKey}Marc";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'WhitToSantaClara'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class WhitToSantaClaraParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth {RShiftKey}Univer' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth {RShiftKey}Univer";
+        
+        /// <summary>
+        /// Type 'Santa {RShiftKey}Clara {RShiftKey}Un' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Santa {RShiftKey}Clara {RShiftKey}Un";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'WhitToScripps'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class WhitToScrippsParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth {RShiftKey}University' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth {RShiftKey}University";
+        
+        /// <summary>
+        /// Type 'Scripps {RShiftKey}Co' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Scripps {RShiftKey}Co";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'WhitToSanDiego'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class WhitToSanDiegoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth";
+        
+        /// <summary>
+        /// Type 'University of {RShiftKey}San {RShiftKey}D' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "University of {RShiftKey}San {RShiftKey}D";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'EastWest'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class EastWestParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth {RShiftKey}University' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth {RShiftKey}University";
+        
+        /// <summary>
+        /// Type 'University of {RShiftKey}Maryland' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "University of {RShiftKey}Maryland";
         #endregion
     }
     
