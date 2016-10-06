@@ -25,14 +25,21 @@ namespace Waze2
         [TestInitialize]
         public void Initialize()
         {
-           testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
+            testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe");
+            // this.UIMap.OpenWazeWebsite();
+            //this.UIMap.OpenWaze2();
+
         }
 
         [TestMethod]
         //This Test is checking if the search bar can find whitworth. This should work
         public void SearchOnWhitworth()
         {
-            this.UIMap.SearchOnWhitworth();
+            // this.UIMap.SearchOnWhitworth();
+            // this.UIMap.Whitworth2();
+            this.UIMap.Whitworth3();
+
+
         }
         [TestMethod]
         //this test is checking if the map will let you search for a location in a different continent. This Should Fail
