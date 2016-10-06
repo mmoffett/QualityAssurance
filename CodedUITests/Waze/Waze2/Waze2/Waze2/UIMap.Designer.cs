@@ -139,6 +139,99 @@ namespace Waze2
             Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(236, 267));
         }
         
+        /// <summary>
+        /// This gets directions between costco in the valley and whitworth
+        /// </summary>
+        public void GoToCostco()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(160, 187));
+
+            // Type 'Costco' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.GoToCostcoParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(171, 221));
+
+            // Type 'Whitworth ' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.GoToCostcoParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(176, 257));
+        }
+        
+        /// <summary>
+        /// Attempts to get directions from two on campus buildings
+        /// </summary>
+        public void BetweenBuildings()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(146, 186));
+
+            // Type 'Eric {RShiftKey}Johnston {RShiftKey}Science {RShiftKey}Center{Enter}' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.BetweenBuildingsParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(151, 224));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(147, 219));
+
+            // Type 'Robinson ' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.BetweenBuildingsParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(176, 258));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(393, 225));
+        }
+        
+        /// <summary>
+        /// This gets directions that leave the country from Whitworth to Nelson Canada
+        /// </summary>
+        public void GoToCanada()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(168, 177));
+
+            // Type 'Whitworth' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.GoToCanadaParams.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(190, 225));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(190, 225));
+
+            // Type 'Nelson ' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.GoToCanadaParams.UIChromeLegacyWindowDocumentSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(186, 254));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(388, 222));
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(108, 259));
+        }
+        
         #region Properties
         public virtual SearchOnWhitworthParams SearchOnWhitworthParams
         {
@@ -188,6 +281,42 @@ namespace Waze2
             }
         }
         
+        public virtual GoToCostcoParams GoToCostcoParams
+        {
+            get
+            {
+                if ((this.mGoToCostcoParams == null))
+                {
+                    this.mGoToCostcoParams = new GoToCostcoParams();
+                }
+                return this.mGoToCostcoParams;
+            }
+        }
+        
+        public virtual BetweenBuildingsParams BetweenBuildingsParams
+        {
+            get
+            {
+                if ((this.mBetweenBuildingsParams == null))
+                {
+                    this.mBetweenBuildingsParams = new BetweenBuildingsParams();
+                }
+                return this.mBetweenBuildingsParams;
+            }
+        }
+        
+        public virtual GoToCanadaParams GoToCanadaParams
+        {
+            get
+            {
+                if ((this.mGoToCanadaParams == null))
+                {
+                    this.mGoToCanadaParams = new GoToCanadaParams();
+                }
+                return this.mGoToCanadaParams;
+            }
+        }
+        
         public UITrafficJamNewsUpdateWindow UITrafficJamNewsUpdateWindow
         {
             get
@@ -209,6 +338,12 @@ namespace Waze2
         private GoToCubaParams mGoToCubaParams;
         
         private InterHawaiiParams mInterHawaiiParams;
+        
+        private GoToCostcoParams mGoToCostcoParams;
+        
+        private BetweenBuildingsParams mBetweenBuildingsParams;
+        
+        private GoToCanadaParams mGoToCanadaParams;
         
         private UITrafficJamNewsUpdateWindow mUITrafficJamNewsUpdateWindow;
         #endregion
@@ -296,6 +431,66 @@ namespace Waze2
         /// Type 'Oahu' in 'Chrome Legacy Window' document
         /// </summary>
         public string UIChromeLegacyWindowDocumentSendKeys2 = "Oahu";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'GoToCostco'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class GoToCostcoParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Costco' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Costco";
+        
+        /// <summary>
+        /// Type 'Whitworth ' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Whitworth ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'BetweenBuildings'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class BetweenBuildingsParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Eric {RShiftKey}Johnston {RShiftKey}Science {RShiftKey}Center{Enter}' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Eric {RShiftKey}Johnston {RShiftKey}Science {RShiftKey}Center{Enter}";
+        
+        /// <summary>
+        /// Type 'Robinson ' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Robinson ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'GoToCanada'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class GoToCanadaParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth";
+        
+        /// <summary>
+        /// Type 'Nelson ' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys1 = "Nelson ";
         #endregion
     }
     

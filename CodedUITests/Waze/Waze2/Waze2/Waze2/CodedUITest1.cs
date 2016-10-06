@@ -29,28 +29,49 @@ namespace Waze2
         }
 
         [TestMethod]
-        //This Test is checking if the search bar can find whitworth
+        //This Test is checking if the search bar can find whitworth. This should work
         public void SearchOnWhitworth()
         {
             this.UIMap.SearchOnWhitworth();
         }
         [TestMethod]
-        //this test is checking if the map will let you search for a location in a different continent
+        //this test is checking if the map will let you search for a location in a different continent. This Should Fail
         public void SearchOverSeas()
         {
             this.UIMap.SearchOverSeas();
         }
         [TestMethod]
-        //this test is checking that the map will let you search on Cuba
+        //this test is checking that the map will let you search on Cuba. This Should Fail
         public void GoToCuba()
         {
             this.UIMap.GoToCuba();
         }
         [TestMethod]
-        //this test attempts to go between two islands to check that the map will not let you drive across water
+        //this test attempts to go between two islands to check that the map will not let you drive across water. This should fail
         public void interHawaii()
         {
             this.UIMap.InterHawaii();
+        }
+        [TestMethod]
+        //This test checks to see how it reacts to searching the same thing over and over again. This should work (how long until it fails)
+        public void stressTest()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                this.UIMap.GoToCostco();
+            }
+        }
+        [TestMethod]
+        //This searches for directions between two on campus buildings. This should work
+        public void betweenBuildings()
+        {
+            this.UIMap.BetweenBuildings();
+        }
+        [TestMethod]
+        //This is testing the response to going out of the country. We expect this test to succeed
+        public void CountrySwap()
+        {
+            this.UIMap.GoToCanada();
         }
 
         [TestCleanup()]

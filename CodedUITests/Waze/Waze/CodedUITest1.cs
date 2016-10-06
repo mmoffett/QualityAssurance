@@ -25,12 +25,18 @@ namespace Waze
         [TestInitialize]
         public void Initialize()
         {
-            testapp = ApplicationUnderTest.Launch(@"c:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
+
+            BrowserWindow.Launch("waze.com/livemap");
+            //testapp = ApplicationUnderTest.Launch(@"c:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
         }
 
         [TestMethod]
         public void SearchForLocation()
         {
+
+            this.UIMap.LeaveFromCampus();
+
+
         }
         [TestCleanup()]
         public void myTestCleanUp()
@@ -74,5 +80,20 @@ namespace Waze
             }
         }
         private TestContext testContextInstance;
+
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((this.map == null))
+                {
+                    this.map = new UIMap();
+                }
+
+                return this.map;
+            }
+        }
+
+        private UIMap map;
     }
 }
