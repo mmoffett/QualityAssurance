@@ -26,16 +26,9 @@ namespace seleniumDemo
         public void TestChromeDriver()
         {
             driverGC.Navigate().GoToUrl("https://www.waze.com/livemap");
-            IWebElement el = driverGC.FindElement(By.ClassName("twitter-typeahead"));
-            el.Click();
-         el.Clear();
-            el.SendKeys("Hi");
-          //driverGC.FindElement(By.ClassName("twitter-typeahead")).Click();//SendKeys("Whitworth");
-          //driverGC.type("twitter-typeahead","Whitworth");
-            //driverGC.
-           // driverGC.FindElement(By.LinkText("Search for an address or place")); //.SendKeys("Whitworth");
-            //driverGC.FindElement(By.ClassName("gsfi")).SendKeys("Selenium");
-           // driverGC.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
+            driverGC.FindElement(By.ClassName("tt-input")).SendKeys("Whitworth");
+            //driverGC.FindElement(By.ClassName("tt-input")).SendKeys(Keys.ArrowDown);
+            //driverGC.FindElement(By.ClassName("tt-dataset-places")); ;//.Click();
         }
 
 
