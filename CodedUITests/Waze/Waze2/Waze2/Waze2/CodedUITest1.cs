@@ -25,15 +25,11 @@ namespace Waze2
         [TestInitialize]
         public void Initialize()
         {
-<<<<<<< HEAD
             //testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
             testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe");
-=======
             testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe");
             // this.UIMap.OpenWazeWebsite();
             //this.UIMap.OpenWaze2();
-
->>>>>>> 447b2860f14a1785315848c34036377c673a0a4c
         }
 
         [TestMethod]
