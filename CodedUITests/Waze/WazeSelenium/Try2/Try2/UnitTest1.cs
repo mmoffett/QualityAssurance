@@ -21,9 +21,10 @@ namespace seleniumDemo
         [TestMethod]
         public void TestChromeDriver()
         {
-            driverGC.Navigate().GoToUrl("http://www.google.com");
-            driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
-            driverGC.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
+            driverGC.Navigate().GoToUrl("http://www.waze.com/livemap");
+            //driverGC.Click("input.query.tt-input");
+            driverGC.FindElement(By.LinkText("Search for an address or place")); //.SendKeys("Whitworth");
+            // driverGC.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
         }
        // [TestMethod]
       //  public void TestFFDriver()
