@@ -15,8 +15,8 @@ namespace seleniumDemo
         [AssemblyInitialize]
         public static void SetUp(TestContext context)
         {
-            driverFF = new FirefoxDriver();
-            driverGC = new ChromeDriver(@"C:\Users\mmoffett18\desktop\chromedriver");
+            //driverFF = new FirefoxDriver();
+            driverGC = new ChromeDriver(@"C:\Users\mmoffett18\desktop");
         }
         [TestMethod]
         public void TestChromeDriver()
@@ -25,12 +25,12 @@ namespace seleniumDemo
             driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
             driverGC.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
         }
-        [TestMethod]
-        public void TestFFDriver()
-        {
-            driverFF.Navigate().GoToUrl("http://www.google.com");
-            driverFF.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
-            driverFF.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
-        }
+       // [TestMethod]
+      //  public void TestFFDriver()
+      //  {
+      //      driverFF.Navigate().GoToUrl("http://www.google.com");
+       //     driverFF.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
+       //     driverFF.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
+       // }
     }
 }
