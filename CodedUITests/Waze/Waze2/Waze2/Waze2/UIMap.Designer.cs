@@ -403,6 +403,88 @@ namespace Waze2
             Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(263, 256));
         }
         
+        /// <summary>
+        /// Opens Waze
+        /// </summary>
+        public void OpenWazeWebsite()
+        {
+            #region Variable Declarations
+            WinEdit uIAddressandsearchbarEdit = this.UINewTabGoogleChromeWindow.UIItemGroup.UIAddressandsearchbarEdit;
+            #endregion
+
+            // Click 'Address and search bar' text box
+            Mouse.Click(uIAddressandsearchbarEdit, new Point(102, 12));
+
+            // Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+            Keyboard.SendKeys(uIAddressandsearchbarEdit, this.OpenWazeWebsiteParams.UIAddressandsearchbarEditSendKeys, ModifierKeys.None);
+        }
+        
+        /// <summary>
+        /// OpenWaze2 - Use 'OpenWaze2Params' to pass parameters into this method.
+        /// </summary>
+        public void OpenWaze2()
+        {
+            #region Variable Declarations
+            WinEdit uIAddressandsearchbarEdit = this.UINewTabGoogleChromeWindow.UIItemGroup.UIAddressandsearchbarEdit;
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            #endregion
+
+            // Click 'Address and search bar' text box
+            Mouse.Click(uIAddressandsearchbarEdit, new Point(41, 7));
+
+            // Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+            Keyboard.SendKeys(uIAddressandsearchbarEdit, this.OpenWaze2Params.UIAddressandsearchbarEditSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(127, 210));
+        }
+        
+        /// <summary>
+        /// Whitworth2 - Use 'Whitworth2Params' to pass parameters into this method.
+        /// </summary>
+        public void Whitworth2()
+        {
+            #region Variable Declarations
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            WinControl uIChromeLegacyWindowDocument = this.UITrafficJamNewsUpdateWindow.UIChromeLegacyWindowWindow1.UIChromeLegacyWindowDocument;
+            #endregion
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(226, 206));
+
+            // Type 'Whitworth {RShiftKey}Univeri{Back}sity' in 'Chrome Legacy Window' document
+            Keyboard.SendKeys(uIChromeLegacyWindowDocument, this.Whitworth2Params.UIChromeLegacyWindowDocumentSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(220, 258));
+        }
+        
+        /// <summary>
+        /// Whitworth3 - Use 'Whitworth3Params' to pass parameters into this method.
+        /// </summary>
+        public void Whitworth3()
+        {
+            #region Variable Declarations
+            WinEdit uIAddressandsearchbarEdit = this.UINewTabGoogleChromeWindow.UIItemGroup.UIAddressandsearchbarEdit;
+            WinWindow uITrafficJamNewsUpdateWindow1 = this.UITrafficJamNewsUpdateWindow.UITrafficJamNewsUpdateWindow1;
+            #endregion
+
+            // Click 'Address and search bar' text box
+            Mouse.Click(uIAddressandsearchbarEdit, new Point(79, 9));
+
+            // Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+            Keyboard.SendKeys(uIAddressandsearchbarEdit, this.Whitworth3Params.UIAddressandsearchbarEditSendKeys, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(177, 215));
+
+            // Type 'Whitworth {RShiftKey}Un' in 'Address and search bar' text box
+            Keyboard.SendKeys(uIAddressandsearchbarEdit, this.Whitworth3Params.UIAddressandsearchbarEditSendKeys1, ModifierKeys.None);
+
+            // Click 'Traffic Jam News, Updates from the Road - Waze Liv...' window
+            Mouse.Click(uITrafficJamNewsUpdateWindow1, new Point(227, 257));
+        }
+        
         #region Properties
         public virtual SearchOnWhitworthParams SearchOnWhitworthParams
         {
@@ -560,6 +642,54 @@ namespace Waze2
             }
         }
         
+        public virtual OpenWazeWebsiteParams OpenWazeWebsiteParams
+        {
+            get
+            {
+                if ((this.mOpenWazeWebsiteParams == null))
+                {
+                    this.mOpenWazeWebsiteParams = new OpenWazeWebsiteParams();
+                }
+                return this.mOpenWazeWebsiteParams;
+            }
+        }
+        
+        public virtual OpenWaze2Params OpenWaze2Params
+        {
+            get
+            {
+                if ((this.mOpenWaze2Params == null))
+                {
+                    this.mOpenWaze2Params = new OpenWaze2Params();
+                }
+                return this.mOpenWaze2Params;
+            }
+        }
+        
+        public virtual Whitworth2Params Whitworth2Params
+        {
+            get
+            {
+                if ((this.mWhitworth2Params == null))
+                {
+                    this.mWhitworth2Params = new Whitworth2Params();
+                }
+                return this.mWhitworth2Params;
+            }
+        }
+        
+        public virtual Whitworth3Params Whitworth3Params
+        {
+            get
+            {
+                if ((this.mWhitworth3Params == null))
+                {
+                    this.mWhitworth3Params = new Whitworth3Params();
+                }
+                return this.mWhitworth3Params;
+            }
+        }
+        
         public UITrafficJamNewsUpdateWindow UITrafficJamNewsUpdateWindow
         {
             get
@@ -569,6 +699,18 @@ namespace Waze2
                     this.mUITrafficJamNewsUpdateWindow = new UITrafficJamNewsUpdateWindow();
                 }
                 return this.mUITrafficJamNewsUpdateWindow;
+            }
+        }
+        
+        public UINewTabGoogleChromeWindow UINewTabGoogleChromeWindow
+        {
+            get
+            {
+                if ((this.mUINewTabGoogleChromeWindow == null))
+                {
+                    this.mUINewTabGoogleChromeWindow = new UINewTabGoogleChromeWindow();
+                }
+                return this.mUINewTabGoogleChromeWindow;
             }
         }
         #endregion
@@ -600,7 +742,17 @@ namespace Waze2
         
         private EastWestParams mEastWestParams;
         
+        private OpenWazeWebsiteParams mOpenWazeWebsiteParams;
+        
+        private OpenWaze2Params mOpenWaze2Params;
+        
+        private Whitworth2Params mWhitworth2Params;
+        
+        private Whitworth3Params mWhitworth3Params;
+        
         private UITrafficJamNewsUpdateWindow mUITrafficJamNewsUpdateWindow;
+        
+        private UINewTabGoogleChromeWindow mUINewTabGoogleChromeWindow;
         #endregion
     }
     
@@ -869,6 +1021,71 @@ namespace Waze2
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'OpenWazeWebsite'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class OpenWazeWebsiteParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+        /// </summary>
+        public string UIAddressandsearchbarEditSendKeys = "www.waze.com/livemap{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'OpenWaze2'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class OpenWaze2Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+        /// </summary>
+        public string UIAddressandsearchbarEditSendKeys = "www.waze.com/livemap{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Whitworth2'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Whitworth2Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Whitworth {RShiftKey}Univeri{Back}sity' in 'Chrome Legacy Window' document
+        /// </summary>
+        public string UIChromeLegacyWindowDocumentSendKeys = "Whitworth {RShiftKey}Univeri{Back}sity";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'Whitworth3'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class Whitworth3Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'www.waze.com/livemap{Enter}' in 'Address and search bar' text box
+        /// </summary>
+        public string UIAddressandsearchbarEditSendKeys = "www.waze.com/livemap{Enter}";
+        
+        /// <summary>
+        /// Type 'Whitworth {RShiftKey}Un' in 'Address and search bar' text box
+        /// </summary>
+        public string UIAddressandsearchbarEditSendKeys1 = "Whitworth {RShiftKey}Un";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
     public class UITrafficJamNewsUpdateWindow : WinWindow
     {
@@ -910,12 +1127,26 @@ namespace Waze2
                 return this.mUIChromeLegacyWindowWindow;
             }
         }
+        
+        public UIChromeLegacyWindowWindow1 UIChromeLegacyWindowWindow1
+        {
+            get
+            {
+                if ((this.mUIChromeLegacyWindowWindow1 == null))
+                {
+                    this.mUIChromeLegacyWindowWindow1 = new UIChromeLegacyWindowWindow1(this);
+                }
+                return this.mUIChromeLegacyWindowWindow1;
+            }
+        }
         #endregion
         
         #region Fields
         private WinWindow mUITrafficJamNewsUpdateWindow1;
         
         private UIChromeLegacyWindowWindow mUIChromeLegacyWindowWindow;
+        
+        private UIChromeLegacyWindowWindow1 mUIChromeLegacyWindowWindow1;
         #endregion
     }
     
@@ -953,6 +1184,109 @@ namespace Waze2
         
         #region Fields
         private WinControl mUIChromeLegacyWindowDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIChromeLegacyWindowWindow1 : WinWindow
+    {
+        
+        public UIChromeLegacyWindowWindow1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "1269974944";
+            this.WindowTitles.Add("Traffic Jam News, Updates from the Road - Waze Live Map - Google Chrome");
+            #endregion
+        }
+        
+        #region Properties
+        public WinControl UIChromeLegacyWindowDocument
+        {
+            get
+            {
+                if ((this.mUIChromeLegacyWindowDocument == null))
+                {
+                    this.mUIChromeLegacyWindowDocument = new WinControl(this);
+                    #region Search Criteria
+                    this.mUIChromeLegacyWindowDocument.SearchProperties[UITestControl.PropertyNames.ControlType] = "Document";
+                    this.mUIChromeLegacyWindowDocument.WindowTitles.Add("Traffic Jam News, Updates from the Road - Waze Live Map - Google Chrome");
+                    #endregion
+                }
+                return this.mUIChromeLegacyWindowDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinControl mUIChromeLegacyWindowDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UINewTabGoogleChromeWindow : WinWindow
+    {
+        
+        public UINewTabGoogleChromeWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "New Tab - Google Chrome";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "Chrome_WidgetWin_1";
+            this.WindowTitles.Add("New Tab - Google Chrome");
+            #endregion
+        }
+        
+        #region Properties
+        public UIItemGroup UIItemGroup
+        {
+            get
+            {
+                if ((this.mUIItemGroup == null))
+                {
+                    this.mUIItemGroup = new UIItemGroup(this);
+                }
+                return this.mUIItemGroup;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItemGroup mUIItemGroup;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "14.0.23107.0")]
+    public class UIItemGroup : WinGroup
+    {
+        
+        public UIItemGroup(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.WindowTitles.Add("New Tab - Google Chrome");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIAddressandsearchbarEdit
+        {
+            get
+            {
+                if ((this.mUIAddressandsearchbarEdit == null))
+                {
+                    this.mUIAddressandsearchbarEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIAddressandsearchbarEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Address and search bar";
+                    this.mUIAddressandsearchbarEdit.WindowTitles.Add("New Tab - Google Chrome");
+                    #endregion
+                }
+                return this.mUIAddressandsearchbarEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIAddressandsearchbarEdit;
         #endregion
     }
 }
