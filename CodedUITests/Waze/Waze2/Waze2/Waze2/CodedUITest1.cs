@@ -25,7 +25,8 @@ namespace Waze2
         [TestInitialize]
         public void Initialize()
         {
-           testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
+            //testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe\");
+            testapp = ApplicationUnderTest.Launch(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe");
         }
 
         [TestMethod]
