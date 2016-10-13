@@ -25,19 +25,29 @@ namespace seleniumDemo
         [TestMethod]
         public void TestChromeDriver()
         {
-            driverGC.Navigate().GoToUrl("https://www.waze.com/livemap");
+            driverGC.Navigate().GoToUrl("https://www.waze.com/");
             driverGC.FindElement(By.ClassName("tt-input")).SendKeys("Whitworth");
             //driverGC.FindElement(By.ClassName("tt-input")).SendKeys(Keys.ArrowDown);
-            //driverGC.FindElement(By.ClassName("tt-dataset-places")); ;//.Click();
+            driverGC.FindElement(By.ClassName("leaflet-control-edit-map leaflet-control"/*tt-dataset-places*/)).Click();
         }
 
 
-       //[TestMethod]
-       // public void TestFFDriver()
-       //{
-       //      driverFF.Navigate().GoToUrl("http://www.google.com");
-       //      driverFF.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
-       //      driverFF.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
-       //}
+
+  /*     [TestMethod]
+         public void TestGCDriver2()
+        {
+              driverGC.Navigate().GoToUrl("http://www.google.com");
+              driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
+              driverGC.FindElement(By.ClassName("sbqs_c.gsfs")).Click();//SendKeys(Keys.ArrowDown);
+        }
+  */
+
+        //[TestMethod]
+        // public void TestFFDriver()
+        //{
+        //      driverFF.Navigate().GoToUrl("http://www.google.com");
+        //      driverFF.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
+        //      driverFF.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
+        //}
     }
 }
