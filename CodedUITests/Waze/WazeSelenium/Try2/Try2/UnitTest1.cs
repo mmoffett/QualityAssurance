@@ -25,22 +25,20 @@ namespace seleniumDemo
         [TestMethod]
         public void TestChromeDriver()
         {
-            driverGC.Navigate().GoToUrl("https://www.waze.com/");
+            driverGC.Navigate().GoToUrl("https://www.waze.com/livemap");
             driverGC.FindElement(By.ClassName("tt-input")).SendKeys("Whitworth");
             //driverGC.FindElement(By.ClassName("tt-input")).SendKeys(Keys.ArrowDown);
-            driverGC.FindElement(By.ClassName("leaflet-control-edit-map leaflet-control"/*tt-dataset-places*/)).Click();
+            driverGC.FindElement(By.XPath("//*[@id = 'origin'] / div / span / span / div")); //ClassName("tt-dataset-places"));
         }
 
-
-
-  /*     [TestMethod]
-         public void TestGCDriver2()
-        {
-              driverGC.Navigate().GoToUrl("http://www.google.com");
-              driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
-              driverGC.FindElement(By.ClassName("sbqs_c.gsfs")).Click();//SendKeys(Keys.ArrowDown);
-        }
-  */
+        /*     [TestMethod]
+               public void TestGCDriver2()
+              {
+                    driverGC.Navigate().GoToUrl("http://www.google.com");
+                    driverGC.FindElement(By.Id("lst-ib")).SendKeys("Selenium");
+                    driverGC.FindElement(By.ClassName("sbqs_c.gsfs")).Click();//SendKeys(Keys.ArrowDown);
+              }
+        */
 
         //[TestMethod]
         // public void TestFFDriver()
