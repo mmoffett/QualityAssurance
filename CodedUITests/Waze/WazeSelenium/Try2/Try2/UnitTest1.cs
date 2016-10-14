@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Interactions.Internal;
 
 namespace seleniumDemo
 {
@@ -19,16 +19,17 @@ namespace seleniumDemo
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--start-maximized");
             driverGC = new ChromeDriver(options);
-
-
         }
         [TestMethod]
         public void TestChromeDriver()
         {
             driverGC.Navigate().GoToUrl("https://www.waze.com/livemap");
             driverGC.FindElement(By.ClassName("tt-input")).SendKeys("Whitworth");
-            //driverGC.FindElement(By.ClassName("tt-input")).SendKeys(Keys.ArrowDown);
-            driverGC.FindElement(By.XPath("//*[@id = 'origin'] / div / span / span / div")); //ClassName("tt-dataset-places"));
+            var el = driverGC.FindElements(By.XPath("//*[@id = 'origin'] / div / span / span / div"));
+            Actions act = new Actions(driverGC).MoveToElement(el, 0, 0).movebyOffSet(20, 20).Click().build().perform();
+
+
+            //driverGC.FindElement(By.XPath("//*[@id = 'origin'] / div / span / span / div")).MoveToOffsetAction(20,20).Click(); //ClassName("tt-dataset-places"));
         }
 
         /*     [TestMethod]
